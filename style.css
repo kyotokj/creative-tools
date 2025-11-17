@@ -1,0 +1,146 @@
+/* ---------------------- */
+/* STYLE GLOBAL           */
+/* ---------------------- */
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0f12;
+  color: #eef2f7;
+}
+
+/* ---------------------- */
+/* TITRE                  */
+/* ---------------------- */
+
+h1 {
+  margin-top: 20px;
+  color: #8ed6c4;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+}
+
+/* ---------------------- */
+/* CONTROLES              */
+/* ---------------------- */
+
+#controls {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+label {
+  font-size: 0.9em;
+}
+
+input[type="range"] {
+  accent-color: #198680;
+  width: 150px;
+}
+
+button {
+  background-color: #198680;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 14px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #8ed6c4;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* ---------------------- */
+/* CANVAS                 */
+/* ---------------------- */
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------------- */
+/* FOOTER                 */
+/* ---------------------- */
+
+footer {
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar left */
+#sidebar {
+  width: 300px;
+  min-width: 220px;
+  background: linear-gradient(180deg,#0f1720 0%, #0b1220 100%);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-right: 1px solid rgba(255,255,255,0.03);
+  overflow: auto;
+}
+
+/* Main canvas area (fills remaining) */
+#main {
+  flex: 1;
+  display: flex;
+  min-width: 0; /* allow children to shrink properly */
+}
+
+/* Canvas container stretches */
+#canvas-container {
+  flex: 1;
+  position: relative;
+  height: 100vh;
+}
+
+/* Make p5 canvas fill container */
+#canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Controls styling */
+#controls label { font-size: 0.95rem; margin-top: 8px; display:block; }
+#controls select, #controls input[type="range"], #controls button {
+  width: 100%;
+  margin-top: 6px;
+}
+#controls button {
+  padding: 8px 10px;
+  border: none;
+  background: #000000;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#controls button:hover { filter: brightness(1.05); }
+
+/* Footer inside sidebar aligned bottom */
+#sidebar footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}

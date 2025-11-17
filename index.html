@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Générateur de fractales</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <aside id="sidebar">
+      <h1>🌀 Générateur de Fractales Interactif</h1>
+
+      <div id="controls">
+        <label for="fractalType">Type de fractale :</label>
+        <select id="fractalType">
+          <option value="tree">Arbre fractal</option>
+          <option value="koch">Flocon de Koch</option>
+          <option value="julia">Fractale de Julia</option>
+          <option value="mandelbrot">Ensemble de Mandelbrot</option>
+          <option value="mix">Mix aléatoire</option>
+        </select>
+
+        <label for="angleSlider">Angle :</label>
+        <input type="range" id="angleSlider" min="0" max="90" value="25" />
+
+        <label for="lengthSlider">Taille initiale / Qualité :</label>
+        <input type="range" id="lengthSlider" min="50" max="400" value="100" />
+
+        <button id="randomColors">🌈 Couleurs aléatoires</button>
+        <button id="saveBtn">💾 Sauvegarder</button>
+      </div>
+
+      <footer>Créé avec 💚 en p5.js</footer>
+    </aside>
+
+    <main id="main">
+      <div id="canvas-container"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+  </body>
 </html>
